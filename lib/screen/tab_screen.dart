@@ -26,17 +26,16 @@ class _TabBarScreenState extends State<TabBarScreen>
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: Container(
+          color: Colors.blueGrey,
           padding: const EdgeInsets.all(2),
-          height: 70,
+          height: 50,
           child: TabBar(
-            unselectedLabelColor: Colors.blueGrey,
-            indicatorColor: Colors.white,
             indicator: BoxDecoration(
-                color: Colors.white24, borderRadius: BorderRadius.circular(10)),
+                color: Colors.grey, borderRadius: BorderRadius.circular(10)),
             controller: tabController,
             tabs: [
               tabColumn(imagePath: "assets/home.png"),
-              tabColumn(imagePath: "assets/user.png"),
+              tabColumn(imagePath: "assets/users.png"),
               tabColumn(imagePath: "assets/profile.png")
             ],
           ),
@@ -48,8 +47,8 @@ class _TabBarScreenState extends State<TabBarScreen>
               appBar: AppBar(
                 backgroundColor: Colors.blueGrey,
                 centerTitle: true,
-                elevation: 15,
-                title: const Text('Post',style: TextStyle(fontSize: 22,fontStyle: FontStyle.italic),),
+
+                title: const Text('Post',style: TextStyle(fontSize: 23,fontStyle: FontStyle.italic),),
 
               ),
               body: const PostScreen(),
@@ -70,7 +69,7 @@ class _TabBarScreenState extends State<TabBarScreen>
                   elevation: 15,
                   title: const Text('Profile',style: TextStyle(fontSize: 22,fontStyle: FontStyle.italic),),
               ),
-              body: ProfileScreen(),
+              body: const ProfileScreen(),
             ),
           ],
         ));
