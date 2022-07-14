@@ -25,6 +25,7 @@ class _TabBarScreenState extends State<TabBarScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
         bottomNavigationBar: Container(
           color: Colors.blueGrey,
           padding: const EdgeInsets.all(2),
@@ -44,6 +45,7 @@ class _TabBarScreenState extends State<TabBarScreen>
           controller: tabController,
           children: [
             Scaffold(
+              backgroundColor: Colors.grey[200],
               appBar: AppBar(
                 backgroundColor: Colors.blueGrey,
                 centerTitle: true,
@@ -51,9 +53,11 @@ class _TabBarScreenState extends State<TabBarScreen>
                 title: const Text('Post',style: TextStyle(fontSize: 23,fontStyle: FontStyle.italic),),
 
               ),
-              body: const PostScreen(),
+              body:
+              const PostScreen(),
             ),
             Scaffold(
+              backgroundColor: Colors.grey[200],
               appBar: AppBar(
                   backgroundColor: Colors.blueGrey,
                   centerTitle: true,
@@ -63,11 +67,12 @@ class _TabBarScreenState extends State<TabBarScreen>
               body: const UserScreen(),
             ),
             Scaffold(
+              backgroundColor: Colors.grey[200],
               appBar: AppBar(
-                  backgroundColor: Colors.blueGrey,
-                  centerTitle: true,
-                  elevation: 15,
-                  title: const Text('Profile',style: TextStyle(fontSize: 22,fontStyle: FontStyle.italic),),
+                backgroundColor: Colors.blueGrey,
+                centerTitle: true,
+                elevation: 15,
+                title: const Text('Profile',style: TextStyle(fontSize: 22,fontStyle: FontStyle.italic),),
               ),
               body: const ProfileScreen(),
             ),
